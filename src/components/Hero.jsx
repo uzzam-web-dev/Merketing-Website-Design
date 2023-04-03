@@ -7,8 +7,8 @@ import arrowImage from "../assets/arrow.png";
 
 const Hero = () => {
   return (
-    <div className="px-6 lg:px-32 flex flex-col lg:flex-row justify-between my-10">
-      <div className="flex-1 flex flex-col justify-center items-start">
+    <div className="px-6 z-10 lg:px-32 flex flex-col lg:flex-row justify-between my-10">
+      <div className="flex-1  flex flex-col justify-center items-start">
         <span className="font-bold text-3xl lg:text-5xl uppercase">
           Stay ahead in <br /> the <span className="text-[#603FBA]">GAME</span>
         </span>
@@ -33,6 +33,12 @@ const Hero = () => {
         <Image src={heroImage} />
       </div>
       <style jsx>{`
+        canvas {
+          position: fixed;
+          top: 0;
+          left: 0;
+          z-index: -10;
+        }
         @keyframes left-right {
           0% {
             transform: translateX(0);

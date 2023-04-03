@@ -1,6 +1,5 @@
 /** @format */
 
-import Link from "next/link";
 import React from "react";
 
 const Header = ({ scrollToMission, scrollToContact, scrollToAbout }) => {
@@ -10,7 +9,7 @@ const Header = ({ scrollToMission, scrollToContact, scrollToAbout }) => {
         <span className="font-bold text-xl">AHMarketing</span>
       </div>
       <div>
-        <div className="flex flex-row gap-4 md:gap-8 text-lg font-semibold">
+        <div className="flex flex-row gap-4 lg:gap-8 text-lg font-semibold">
           <span className="text-[#603FBA] cursor-pointer">Home</span>
           <span className="cursor-pointer" onClick={scrollToMission}>
             Mission

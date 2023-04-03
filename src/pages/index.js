@@ -5,6 +5,7 @@ import Contact from "@/components/Contact";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import OurMission from "@/components/OurMission";
+import WorkExperience from "@/components/WorkExperience";
 import Head from "next/head";
 import { useRef } from "react";
 
@@ -38,13 +39,18 @@ export default function Home() {
           scrollToAbout={scrollToAbout}
           scrollToContact={scrollToContact}
         />
-        <Hero />
+        <div className="z-10 relative">
+          <Hero />
+        </div>
         <div ref={missionRef}>
           <OurMission />
         </div>
         <br />
         <br />
         <br />
+        <div>
+          <WorkExperience />
+        </div>
         <div ref={aboutRef}>
           <AboutUs />
         </div>
