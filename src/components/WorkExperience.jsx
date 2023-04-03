@@ -13,7 +13,7 @@ const WorkExperience = () => {
 
       <div className="px-4 lg:px-32 gap-4 py-10 flex items-center justify-center flex-col lg:flex-row">
         <div className="flex-1">
-          <Image src={gymImage} className="rounded-lg" />
+          <Image src={gymImage} className="rounded-lg" alt="Fitness Image" />
         </div>
         <div className="flex-1 text-gray-50 py-4 flex flex-col bg-[#603FBA] rounded-lg px-4">
           <span className="font-bold text-3xl">Fitness</span>
@@ -22,9 +22,9 @@ const WorkExperience = () => {
             fitness brands and gyms in the United States, Australia, France, and
             Italy. My team and I have a track record of achieving top rankings
             for fitness-related keywords and driving targeted traffic to our
-            clients' websites. With a deep understanding of the fitness industry
-            and the latest digital marketing trends, we've helped numerous
-            fitness brands achieve their marketing goals.
+            clients websites. With a deep understanding of the fitness industry
+            and the latest digital marketing trends, we&apos;ve helped numerous
+            fitness brands achieve their marketing goals
           </span>
         </div>
       </div>
@@ -38,11 +38,11 @@ const WorkExperience = () => {
             ad campaigns for Airbnb listings and apartments. We know how to use
             the latest digital marketing trends to get your real estate listings
             in front of the right audience, no matter what type of property
-            you're selling.
+            you&apos;re selling.
           </span>
         </div>
         <div className="flex-1">
-          <Image src={rsImage} className="rounded-lg" />
+          <Image src={rsImage} className="rounded-lg" alt="Real Estate Image" />
         </div>
       </div>
     </div>
