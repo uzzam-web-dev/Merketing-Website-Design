@@ -16,8 +16,8 @@ export default async function handler(req, res) {
   await sgMail.setApiKey(process.env.SEND_GRID_API_KEY);
 
   const msg = {
-    to: "hsyed1228@gmail.com",
-    from: "breederspak@gmail.com",
+    to: "uzzamwebdev@gmail.com",
+    from: "ahmarketingco5@gmail.com",
     subject: "AHMARKETING EMAIL",
     text: `${body.message}`,
     html: `<div style="display: flex; flex-direction: column;">
