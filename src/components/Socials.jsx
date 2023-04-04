@@ -18,7 +18,7 @@ const Socials = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   return (
-    <div className="flex flex-col items-center justify-center w-full px-4 py-10 lg:px-32">
+    <div className="flex flex-col items-center justify-center w-full lg:px-32">
       <span className="text-2xl font-bold text-center">Socials</span>
       <div className="w-16 h-[4px] mt-2 bg-[#603FBA]"></div>
       <div className="flex flex-col items-center justify-center gap-8 mt-10 lg:flex-row">
@@ -33,6 +33,7 @@ const Socials = () => {
           <div
             className="fb-page"
             data-href="https://www.facebook.com/profile.php?id=100091355390595&amp;mibextid=ZbWKwL"
+            data-width="499"
             data-tabs="timeline"
             data-small-header="true"
             data-adapt-container-width="true"
@@ -41,7 +42,7 @@ const Socials = () => {
           >
             <blockquote
               cite="https://www.facebook.com/profile.php?id=100091355390595&amp;mibextid=ZbWKwL"
-              class="fb-xfbml-parse-ignore"
+              className="fb-xfbml-parse-ignore"
             >
               <a href="https://www.facebook.com/profile.php?id=100091355390595&amp;mibextid=ZbWKwL">
                 SHM
@@ -49,7 +50,7 @@ const Socials = () => {
             </blockquote>
           </div>
         </div>
-        <div className="w-96 lg:w-[510px] h-96 lg:h-[500px]">
+        <div className="w-[250px] lg:w-[510px] h-96 lg:h-[500px]">
           <a
             className="twitter-timeline"
             href="https://twitter.com/Shmarketing13?ref_src=twsrc%5Etfw"
