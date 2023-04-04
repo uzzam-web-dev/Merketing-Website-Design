@@ -5,6 +5,7 @@ import Contact from "@/components/Contact";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import OurMission from "@/components/OurMission";
+import Socials from "@/components/Socials";
 import WorkExperience from "@/components/WorkExperience";
 import Head from "next/head";
 import { useRef } from "react";
@@ -57,6 +58,8 @@ export default function Home() {
         <div ref={contactRef}>
           <Contact />
         </div>
+        <br />
+        <Socials />
       </div>
     </>
   );
