@@ -9,6 +9,7 @@ const Socials = () => {
   useEffect(() => {
     function handleResize() {
       setScreenWidth(window.innerWidth);
+      console.log(window.innerHeight);
     }
 
     window.addEventListener("resize", handleResize);
@@ -21,36 +22,45 @@ const Socials = () => {
     <div className="flex flex-col items-center justify-center w-full lg:px-32">
       <span className="text-2xl font-bold text-center">Socials</span>
       <div className="w-16 h-[4px] mt-2 bg-[#603FBA]"></div>
-      <div className="flex flex-col items-center justify-center gap-8 mt-10 lg:flex-row">
-        <Script
-          async
-          defer
-          crossOrigin="anonymous"
-          src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v16.0"
-          nonce="EZlPRUv6"
-        ></Script>
-        <div>
-          <div
-            className="fb-page"
-            data-href="https://www.facebook.com/profile.php?id=100091355390595&amp;mibextid=ZbWKwL"
-            data-width="499"
-            data-tabs="timeline"
-            data-small-header="true"
-            data-adapt-container-width="true"
-            data-hide-cover="false"
-            data-show-facepile="true"
-          >
-            <blockquote
-              cite="https://www.facebook.com/profile.php?id=100091355390595&amp;mibextid=ZbWKwL"
-              className="fb-xfbml-parse-ignore"
-            >
-              <a href="https://www.facebook.com/profile.php?id=100091355390595&amp;mibextid=ZbWKwL">
-                SHM
-              </a>
-            </blockquote>
+      <div className="flex flex-col items-start justify-center gap-8 mt-10 lg:flex-row">
+        {screenWidth > 620 ? (
+          <div className="h-[900px]">
+            <iframe
+              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100091355390595%26mibextid%3DZbWKwL&tabs=timeline&width=500&height=900&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+              width="500"
+              height="900"
+              style={{
+                border: "none",
+                overflow: "hidden",
+                display: "flex",
+                flex: "1",
+              }}
+              scrolling="no"
+              frameBorder="0"
+              allowFullScreen={true}
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            ></iframe>
           </div>
-        </div>
-        <div className="w-[250px] lg:w-[510px] h-96 lg:h-[500px]">
+        ) : (
+          <div className="h-[600px]">
+            <iframe
+              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100091355390595%26mibextid%3DZbWKwL&tabs=timeline&width=300&height=600&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+              width="300"
+              height="600"
+              style={{
+                border: "none",
+                overflow: "hidden",
+                display: "flex",
+                flex: "1",
+              }}
+              scrolling="no"
+              frameBorder="0"
+              allowFullScreen={true}
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            ></iframe>
+          </div>
+        )}
+        <div className="w-[275px] lg:w-[510px]">
           <a
             className="twitter-timeline"
             href="https://twitter.com/Shmarketing13?ref_src=twsrc%5Etfw"
