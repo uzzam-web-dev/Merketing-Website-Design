@@ -2,6 +2,7 @@
 
 import AboutUs from "@/components/AboutUs";
 import Contact from "@/components/Contact";
+import DemoCall from "@/components/DemoCall";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import OurMission from "@/components/OurMission";
@@ -41,7 +42,7 @@ export default function Home() {
           scrollToContact={scrollToContact}
         />
         <div className="relative z-10">
-          <Hero />
+          <Hero scrollToContact={scrollToContact} />
         </div>
         <div ref={missionRef}>
           <OurMission />
@@ -54,6 +55,9 @@ export default function Home() {
         </div>
         <div ref={aboutRef}>
           <AboutUs />
+        </div>
+        <div>
+          <DemoCall />
         </div>
         <div ref={contactRef}>
           <Contact />

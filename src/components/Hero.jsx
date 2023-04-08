@@ -5,14 +5,14 @@ import Image from "next/image";
 import heroImage from "../assets/heroImage.jpg";
 import arrowImage from "../assets/arrow.png";
 
-const Hero = () => {
+const Hero = ({ scrollToContact }) => {
   return (
-    <div className="px-6 z-10 lg:px-32 flex flex-col lg:flex-row justify-between my-10">
-      <div className="flex-1  flex flex-col justify-center items-start">
-        <span className="font-bold text-3xl lg:text-5xl uppercase">
+    <div className="z-10 flex flex-col justify-between px-6 my-10 lg:px-32 lg:flex-row">
+      <div className="flex flex-col items-start justify-center flex-1">
+        <span className="text-3xl font-bold uppercase lg:text-5xl">
           Stay ahead in <br /> the <span className="text-[#603FBA]">GAME</span>
         </span>
-        <span className="font-semibold mt-4 text-gray-700">
+        <span className="mt-4 font-semibold text-gray-700">
           Our team specializes in SEO and ads, helping businesses improve their
           online visibility and drive more traffic to their websites. With our
           expertise, we can create customized strategies tailored to your unique
@@ -20,8 +20,13 @@ const Hero = () => {
           results
         </span>
         <br />
-        <div className="flex flex-row gap-2 justify-between items-center bg-[#603FBA] py-2 px-4 rounded-md cursor-pointer">
-          <span className="font-semibold text-white text-sm lg:text-base">
+        <div
+          onClick={() => {
+            scrollToContact();
+          }}
+          className="flex flex-row gap-2 justify-between items-center bg-[#603FBA] py-2 px-4 rounded-md cursor-pointer"
+        >
+          <span className="text-sm font-semibold text-white lg:text-base">
             Free demo call
           </span>
           <div className="animate-left-right">
