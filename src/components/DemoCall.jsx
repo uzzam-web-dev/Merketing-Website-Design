@@ -2,7 +2,7 @@
 
 import React from "react";
 import demoCallImage from "../assets/democall.jpg";
-import userImage from "../assets/user.png";
+import userImage from "../assets/my_pic.jpeg";
 import tickImage from "../assets/tick.png";
 import Image from "next/image";
 
@@ -12,13 +12,16 @@ const DemoCall = () => {
       <span className="text-2xl font-bold text-center">Free Demo Call</span>
       <div className="w-16 h-[4px] mt-2 bg-[#603FBA]"></div>
       <br />
-      <br />
       <div className="flex flex-col gap-8 lg:flex-row">
         <div className="flex-1">
           <Image src={demoCallImage} alt="demo call" />
         </div>
-        <div className="flex flex-col items-center flex-1 px-4 py-16 lg:items-start lg:pr-4 lg:px-0">
-          <Image src={userImage} alt="profile image" className="w-[100px]" />
+        <div className="flex flex-col items-center flex-1 py-16 lg:items-start lg:pr-4 lg:px-0">
+          <Image
+            src={userImage}
+            alt="profile image"
+            className="w-[100px] h-[100px] lg:w-[150px] lg:h-[150px] rounded-[75%]"
+          />
           <span className="text-2xl mt-4 text-[#603FBA] font-bold">
             SCHEDULE YOUR CALL WITH AHMED
           </span>
@@ -32,8 +35,8 @@ const DemoCall = () => {
             Advertising.
           </span>
           <span className="mt-6 text-xl">
-            Find a time on Ahmed's calendar to schedule your call today and we
-            look forward to speaking to you soon!
+            Find a time on Ahmed&apos;s calendar to schedule your call today and
+            we look forward to speaking to you soon!
           </span>
           <span className="text-2xl mt-4 mb-2 text-[#603FBA] font-bold">
             THIS AUDIT CALL IS PERFECT FOR:
