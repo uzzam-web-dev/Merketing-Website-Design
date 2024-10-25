@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import arrowImage from "../assets/arrow.png";
-import axios from "axios";
 import { Grid } from "react-loader-spinner";
 
 const Contact = () => {
@@ -11,27 +10,6 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [phone, setPhone] = useState("");
   const [name, setName] = useState("");
-
-  const [sending, setSending] = useState(false);
-  const [sended, setSended] = useState(false);
-
-  const submitHandler = async () => {
-    setSending(true);
-    await axios
-      .post("/api/email", {
-        email: email,
-        name: name,
-        message: message,
-        phone: phone,
-      })
-      .then((res) => {
-        setSended(true);
-      })
-      .catch((e) => {
-        setSending(false);
-      });
-  };
-
   return (
     <div className="flex flex-col items-center justify-center w-full px-4 py-20 lg:px-32 bg-slate-200">
       <span className="text-2xl font-bold text-center">Contact Us</span>
